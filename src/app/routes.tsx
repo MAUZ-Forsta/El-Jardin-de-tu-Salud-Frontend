@@ -8,6 +8,7 @@ import CoursePlayer from './components/CoursePlayer';
 import CourseCheckout from './components/CourseCheckout';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import AdminPanel from './components/admin/AdminPanel';
 import UserProfile from './components/UserProfile';
 
 export const router = createBrowserRouter([
@@ -24,6 +25,7 @@ export const router = createBrowserRouter([
       { path: 'pago', Component: Checkout },
       { path: 'pago/curso/:id', Component: CourseCheckout },
       { path: 'perfil', Component: UserProfile },
+      { path: 'admin', Component: AdminPanel },
     ],
   },
 ]);
