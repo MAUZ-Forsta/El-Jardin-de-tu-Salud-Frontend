@@ -1,0 +1,280 @@
+@custom-variant dark (&:is(.dark *));
+
+/* ─────────────────────────────────────────────────────────
+   LIGHT  —  Autumnal vivid palette
+───────────────────────────────────────────────────────── */
+:root {
+  --font-size: 16px;
+  --background:         #fdf4e8;
+  --foreground:         #2a1a08;
+  --card:               #fffdf8;
+  --card-foreground:    #2a1a08;
+  --popover:            #fffdf8;
+  --popover-foreground: #2a1a08;
+  --primary:            #1e5c0a;
+  --primary-foreground: #ffffff;
+  --secondary:          #fef3dc;
+  --secondary-foreground: #1e5c0a;
+  --muted:              #f0e2c0;
+  --muted-foreground:   #7a5a38;
+  --accent:             #c85a00;
+  --accent-foreground:  #ffffff;
+  --destructive:        #c0392b;
+  --destructive-foreground: #ffffff;
+  --border:             rgba(140, 80, 20, 0.16);
+  --input:              transparent;
+  --input-background:   #faefd8;
+  --switch-background:  #c4a882;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring:               oklch(0.62 0.16 55);
+  --chart-1:            oklch(0.65 0.22 41);
+  --chart-2:            oklch(0.52 0.18 140);
+  --chart-3:            oklch(0.48 0.16 30);
+  --chart-4:            oklch(0.78 0.20 80);
+  --chart-5:            oklch(0.70 0.19 65);
+  --radius:             0.625rem;
+  --sidebar:            #fffdf8;
+  --sidebar-foreground: #2a1a08;
+  --sidebar-primary:    #1e5c0a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent:     #fef3dc;
+  --sidebar-accent-foreground: #2a1a08;
+  --sidebar-border:     rgba(140, 80, 20, 0.14);
+  --sidebar-ring:       oklch(0.62 0.16 55);
+
+  /* ── Brand variables (for inline styles across all components) ── */
+  --brand-green:          #1e5c0a;
+  --brand-green-vivid:    #257010;
+  --brand-green-soft:     rgba(30, 92, 10, 0.08);
+  --brand-orange:         #c85a00;
+  --brand-orange-vivid:   #e06800;
+  --brand-orange-soft:    rgba(200, 90, 0, 0.09);
+  --brand-footer:         #162d06;
+  --brand-section-warm:   #fef0e0;
+  --brand-section-green:  #f0f7ec;
+  --brand-panel:          #fffdf8;
+  --brand-inactive:       #9ca3af;
+  --brand-overlay:        rgba(253, 244, 232, 1);
+  --brand-overlay-scroll: rgba(255, 250, 240, 0.97);
+  --brand-nav-shadow:     rgba(140, 80, 20, 0.10);
+  --brand-nav-shadow-scroll: rgba(100, 50, 10, 0.10);
+}
+
+/* ─────────────────────────────────────────────────────────
+   DARK  —  Autumnal night (forest at dusk)
+───────────────────────────────────────────────────────── */
+.dark {
+  --background:         #18110a;
+  --foreground:         #eeddc0;
+  --card:               #231808;
+  --card-foreground:    #eeddc0;
+  --popover:            #2c1f0e;
+  --popover-foreground: #eeddc0;
+  --primary:            #60c030;
+  --primary-foreground: #0e2004;
+  --secondary:          #2e1e0a;
+  --secondary-foreground: #eeddc0;
+  --muted:              #271a08;
+  --muted-foreground:   #9a7a55;
+  --accent:             #e0700a;
+  --accent-foreground:  #ffffff;
+  --destructive:        #e53935;
+  --destructive-foreground: #ffffff;
+  --border:             rgba(200, 130, 40, 0.22);
+  --input:              transparent;
+  --input-background:   #2e1e0a;
+  --switch-background:  #4a3018;
+  --ring:               oklch(0.68 0.20 80);
+  --chart-1:            oklch(0.72 0.22 50);
+  --chart-2:            oklch(0.65 0.20 145);
+  --chart-3:            oklch(0.60 0.18 35);
+  --chart-4:            oklch(0.80 0.22 85);
+  --chart-5:            oklch(0.72 0.20 68);
+  --sidebar:            #1e1508;
+  --sidebar-foreground: #eeddc0;
+  --sidebar-primary:    #60c030;
+  --sidebar-primary-foreground: #0e2004;
+  --sidebar-accent:     #2e1e0a;
+  --sidebar-accent-foreground: #eeddc0;
+  --sidebar-border:     rgba(200, 130, 40, 0.18);
+  --sidebar-ring:       oklch(0.68 0.20 80);
+
+  /* ── Brand variables (dark overrides) ── */
+  --brand-green:          #60c030;
+  --brand-green-vivid:    #70d840;
+  --brand-green-soft:     rgba(96, 192, 48, 0.12);
+  --brand-orange:         #e07020;
+  --brand-orange-vivid:   #f08030;
+  --brand-orange-soft:    rgba(224, 112, 32, 0.12);
+  --brand-footer:         #0d1a06;
+  --brand-section-warm:   #1e1508;
+  --brand-section-green:  #1a2a10;
+  --brand-panel:          #231808;
+  --brand-inactive:       #7a7a8a;
+  --brand-overlay:        rgba(24, 17, 10, 1);
+  --brand-overlay-scroll: rgba(30, 22, 14, 0.97);
+  --brand-nav-shadow:     rgba(200, 130, 40, 0.10);
+  --brand-nav-shadow-scroll: rgba(0, 0, 0, 0.40);
+}
+
+/* ─────────────────────────────────────────────────────────
+   Tailwind @theme mapping  (keep token names intact)
+───────────────────────────────────────────────────────── */
+@theme inline {
+  --color-background:         var(--background);
+  --color-foreground:         var(--foreground);
+  --color-card:               var(--card);
+  --color-card-foreground:    var(--card-foreground);
+  --color-popover:            var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary:            var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary:          var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted:              var(--muted);
+  --color-muted-foreground:   var(--muted-foreground);
+  --color-accent:             var(--accent);
+  --color-accent-foreground:  var(--accent-foreground);
+  --color-destructive:        var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border:             var(--border);
+  --color-input:              var(--input);
+  --color-input-background:   var(--input-background);
+  --color-switch-background:  var(--switch-background);
+  --color-ring:               var(--ring);
+  --color-chart-1:            var(--chart-1);
+  --color-chart-2:            var(--chart-2);
+  --color-chart-3:            var(--chart-3);
+  --color-chart-4:            var(--chart-4);
+  --color-chart-5:            var(--chart-5);
+  --radius-sm:  calc(var(--radius) - 4px);
+  --radius-md:  calc(var(--radius) - 2px);
+  --radius-lg:  var(--radius);
+  --radius-xl:  calc(var(--radius) + 4px);
+  --color-sidebar:               var(--sidebar);
+  --color-sidebar-foreground:    var(--sidebar-foreground);
+  --color-sidebar-primary:       var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent:        var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border:        var(--sidebar-border);
+  --color-sidebar-ring:          var(--sidebar-ring);
+}
+
+/* ─────────────────────────────────────────────────────────
+   Base layer
+───────────────────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    font-size: var(--font-size);
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1 { font-size: var(--text-2xl); font-weight: var(--font-weight-medium); line-height: 1.5; }
+  h2 { font-size: var(--text-xl);  font-weight: var(--font-weight-medium); line-height: 1.5; }
+  h3 { font-size: var(--text-lg);  font-weight: var(--font-weight-medium); line-height: 1.5; }
+  h4 { font-size: var(--text-base);font-weight: var(--font-weight-medium); line-height: 1.5; }
+  label  { font-size: var(--text-base); font-weight: var(--font-weight-medium); line-height: 1.5; }
+  button { font-size: var(--text-base); font-weight: var(--font-weight-medium); line-height: 1.5; }
+  input  { font-size: var(--text-base); font-weight: var(--font-weight-normal); line-height: 1.5; }
+}
+
+/* ─────────────────────────────────────────────────────────
+   Mobile layout — bottom padding for bottom nav.
+   max() ensures ≥10px clearance on physical-button devices
+   where env(safe-area-inset-bottom) resolves to 0.
+───────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .main-mobile-pad {
+    padding-bottom: calc(4.5rem + max(env(safe-area-inset-bottom, 0px), 10px));
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+   Promo banner — horizontal marquee (mobile only)
+───────────────────────────────────────────────────────── */
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 18s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ─────────────────────────────────────────────────────────
+   Dark mode: remap common Tailwind neutral utilities.
+   Unlayered rules beat Tailwind's @layer utilities via
+   CSS cascade layer ordering (unlayered > layered).
+───────────────────────────────────────────────────────── */
+
+/* Backgrounds */
+.dark .bg-white          { background-color: var(--card); }
+.dark .bg-gray-50        { background-color: #1e1610; }
+.dark .bg-gray-100       { background-color: var(--secondary); }
+.dark .bg-gray-200       { background-color: var(--muted); }
+.dark .bg-gray-800       { background-color: var(--card); }
+.dark .bg-gray-900       { background-color: var(--background); }
+
+/* Hover backgrounds */
+.dark .hover\:bg-white:hover     { background-color: var(--card); }
+.dark .hover\:bg-gray-50:hover   { background-color: #1e1610; }
+.dark .hover\:bg-gray-100:hover  { background-color: var(--secondary); }
+.dark .hover\:bg-amber-50:hover  { background-color: var(--secondary); }
+.dark .hover\:bg-red-50:hover    { background-color: rgba(200, 40, 40, 0.12); }
+.dark .hover\:bg-green-50:hover  { background-color: var(--brand-green-soft); }
+
+/* Text */
+.dark .text-gray-900     { color: var(--foreground); }
+.dark .text-gray-800     { color: var(--foreground); }
+.dark .text-gray-700     { color: var(--foreground); }
+.dark .text-gray-600     { color: var(--muted-foreground); }
+.dark .text-gray-500     { color: var(--muted-foreground); }
+.dark .text-gray-400     { color: var(--muted-foreground); opacity: 0.75; }
+.dark .text-gray-300     { color: var(--muted-foreground); opacity: 0.60; }
+
+/* Borders */
+.dark .border-gray-50    { border-color: var(--border); }
+.dark .border-gray-100   { border-color: var(--border); }
+.dark .border-gray-200   { border-color: var(--border); }
+.dark .border-gray-300   { border-color: var(--border); }
+
+/* Dividers */
+.dark .divide-gray-100 > * + * { border-color: var(--border); }
+.dark .divide-gray-200 > * + * { border-color: var(--border); }
+
+/* Shadows — darker for dark mode */
+.dark .shadow-sm  { box-shadow: 0 1px 2px rgba(0,0,0,0.55); }
+.dark .shadow     { box-shadow: 0 1px 3px rgba(0,0,0,0.55), 0 1px 2px rgba(0,0,0,0.60); }
+.dark .shadow-md  { box-shadow: 0 4px 8px rgba(0,0,0,0.60), 0 2px 4px rgba(0,0,0,0.50); }
+.dark .shadow-lg  { box-shadow: 0 10px 20px rgba(0,0,0,0.65), 0 4px 8px rgba(0,0,0,0.55); }
+.dark .shadow-xl  { box-shadow: 0 20px 30px rgba(0,0,0,0.65), 0 8px 16px rgba(0,0,0,0.55); }
+.dark .shadow-2xl { box-shadow: 0 25px 50px rgba(0,0,0,0.75); }
+
+.dark .hover\:shadow-md:hover { box-shadow: 0 4px 8px rgba(0,0,0,0.60), 0 2px 4px rgba(0,0,0,0.50); }
+.dark .hover\:shadow-lg:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.65), 0 4px 8px rgba(0,0,0,0.55); }
+
+/* Ring */
+.dark .focus\:ring-2:focus { box-shadow: 0 0 0 2px var(--brand-green); }
+
+/* Placeholder text */
+.dark ::placeholder { color: var(--muted-foreground); opacity: 0.6; }
